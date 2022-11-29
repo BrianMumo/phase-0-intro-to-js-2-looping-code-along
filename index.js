@@ -1,38 +1,28 @@
-// Code your solutions in this file
 
-// const gifts = ["teddy bear", "drone", "doll"];
+const names=["Guadalupe", "Ollie", "Aki"];
 
-/*function wrapGifts(gifts){
-    for (let i = 0; i < gifts.length; i++){
-        const newGifts =[];
-        newGifts.push(`Wrapped ${gifts[i]} and added a bow!`);
-        debugger;
+// function writeCards(names, event) {
+//    return  names.map(name=> `Thank you, ${name}, for the wonderful ${event} gift!`)
+// }
+
+// console.log(writeCards(names, "surprise"))
+
+
+function writeCards(names, event) {
+    let messages = []
+    for (let i = 0; i < names.length; i++) {
+      messages.push("Thank you, " + names[i] + ", for the wonderful " + event + " gift!")
     }
-    return newGifts;
-}*/
-
-// wrapGifts(gifts);
-const names = ["Ada","Bredan","Ali","Guadalupe","Ollie","Aki"];
-const thankyouMsg = [];
-function writeCards(names,event){
-    for(let i = 0; i < names.length; i++){
-        
-        thankyouMsg.push(`Thank you, ${names[i]}, for the wonderful ${event} gift`);
-
-    };
-    return console.log(thankyouMsg);
-};
-
-writeCards(names,"birthday");
-
-function countDown(){
-    let countDown = 10;
-    while (countDown >= 0){
-        console.log(countDown);
-        countDown--;
+    return messages;
+  }
+  console.log(writeCards(names, "surprise"))
+  
+let i;
+function countDown(i){
+    while( i > -1){
+        console.log(i);
+        i--;
     }
-    return countDown;
+}
+countDown(10);
 
-};
-
-countDown();
